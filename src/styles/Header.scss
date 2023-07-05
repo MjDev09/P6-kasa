@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+$text-color-primary: #FF6060;
+
+
+.banner {
+    width: 1240px;
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+        width: 210px;    
+    }
+
+    &__logo {
+
+    }
+
+    &__nav {
+        width: 309px;
+        height: 34px;
+    }
+}
+
+nav__btn {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 500;
+    font-family: 'Montserra', sans-serif;;
+    color: $text-color-primary;
+}
+
