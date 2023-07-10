@@ -1,25 +1,26 @@
 import '../styles/Title.scss'
 import '../styles/About.scss'
 import img_title from '../assets/background-about.png'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { ValorContext } from '../utils/ContextProvider'
-import { AnimationProvider } from '../utils/ContextProvider'
+import { AnimationContext } from '../utils/ContextProvider'
 
 function About() {
     const { openOnglet, valeurs } = useContext(ValorContext)
-    const classNameFiabilite = valeurs.onglet_fiabilite ? 'textVisible' : 'textHidden';
+    
 
-    const { animation, animationOn } = useContext(AnimationProvider)
-    const classNameAnimationFiabilite = animationOn.animation_fiabilite ? 'textAnimationOn' : 'textAnimationOff';
+    const { animationFunction, animationOn } = useContext(AnimationContext)
+    
 
-    const animationClick = (onglet, animationValeur) => {
-        openOnglet(onglet)
-        animation(animationValeur)
+    const animationFiabiliteClick = () => {
+        openOnglet('onglet_fiabilite')
+        animationFunction('animation_fiabilite')
     }
 
-    const AnimationEnd = () => {
-        openOnglet(false);
+    const AnimationFiabiliteEnd = () => {
+        openOnglet('onglet_fiabilite');
       };
+
 
     return (
         <div>
@@ -31,10 +32,12 @@ function About() {
                 <div className='valeurs__box'>
                     <div className='boxValor'>
                         <h2 className='boxValor__title'>Fiabilité</h2>
-                        <button onClick={() => openOnglet('onglet_fiabilite')}  className='boxValor__icone-arrow'></button>
-                    </div>{console.log(valeurs)}
+                        <button onClick={animationFiabiliteClick}  className={`boxValor__icone-arrow ${animationOn ? (valeurs ? 'btn-anim' : 'btn-anim-reverse') : ''}`}
+        onAnimationEnd={AnimationFiabiliteEnd}></button>
+                    </div>{console.log(valeurs)}{console.log(animationOn)} 
                     <div className='boxText'>
-                        <p className={`hidden ${classNameFiabilite}`}>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.</p>
+                        <p className={`hidden ${animationOn ? (valeurs ? 'textVisible' : 'textHidden') : ''}`}
+        >Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.</p>
                     </div>
                 </div>
 

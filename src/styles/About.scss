@@ -52,15 +52,19 @@
         background-color: $text-color-primary;
         border: none;
         background-image: url('../assets/arrow_back.png') ;
-    
-        &:hover {
-            animation: arrowRotate 300ms both;
-        }
     }
 
 }
 
-.textVisible {
+.btn-anim {
+    animation: arrowRotate 300ms both;
+}
+
+.btn-anim-reverse {
+    animation: arrowRotate-reverse 300ms both;
+}
+
+.hidden {
     width: 100%;
     border-radius: 0px 0px 5px 5px;
     padding: 20px 15px;
@@ -73,29 +77,25 @@
     font-weight: 400;
     margin: 0;
     font-family: 'Montserra', sans-serif;
+    position: absolute;
+    transform: translateY(-71.92px);
+}
+
+.textVisible {
+   
     animation: textAppearance 2000ms both;
 }
 
 .textHidden {
-    width: 100%;
-    position: absolute;
-    transform: translateY(-71.92px);
-    z-index: -1;
+    animation: textAppearance-reverse 2000ms both;
 }
 
 .boxText {
     width: 100%;
-    height: 52px;
+    height: 2px;
     overflow: hidden;
 }
 
-textAnimationOn {
-
-}
-
-textAnimationOff {
-
-}
 
 @keyframes arrowRotate {
     from {
@@ -122,6 +122,17 @@ textAnimationOff {
     }
     to {
         transform:translateY(0);
+        
+    }
+}
+
+@keyframes textAppearance-reverse {
+    from {
+        transform:translateY(0);      
+        transform-origin: top;     
+    }
+    to {
+        transform: translateY(-100%);
         
     }
 }

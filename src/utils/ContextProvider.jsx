@@ -19,14 +19,14 @@ export const ValorProvider = ({ children }) => {
 export const AnimationContext = createContext()
 
 export const AnimationProvider = ({ children }) => {
-    const [ animationOn, setAnimation] = useState({ animation_fiabilite: false, animation_respect: false, animation_service: false, animation_securite: false })
-    const animation = (animation_select) => {
+    const [animationOn, setAnimation] = useState({ animation_fiabilite: false, animation_respect: false, animation_service: false, animation_securite: false })
+    const animationFunction = (animation_select) => {
         setAnimation({ ...animationOn, [animation_select]: !animationOn[animation_select] });
     }
 
     return (
-        <AnimationContext.Provider value={{ animationOn, animation }}>
+        <AnimationContext.Provider value={{ animationOn, animationFunction }}>
         {children}
         </AnimationContext.Provider>    
     )
-}
+}   
