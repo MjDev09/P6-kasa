@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import 'colors';
+
+.footer {
+    max-width: 1440px;
+    height: 209px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $background-color-footer;
+
+    &__logo {
+        width: 122px;
+        height: 39px;    
+        margin-top: 66px;
+    }
+
+    &__copyright {
+        width: 513px;
+        height: 46px;
+    }
+}

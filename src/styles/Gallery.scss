@@ -1,0 +1,47 @@
+@import 'colors';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+.gallery{
+    max-width: 1240px;
+    margin: 30px auto 30px;
+    padding: 50px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+    background-color: $background-gallery-desktop ;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+figure{
+    max-width: 340px;
+    max-height: 340px;
+    margin: auto;
+    position: relative;
+
+    img{
+        object-fit: cover;
+        width: 100%;
+        max-height: 340px;
+        height: 27.35vw;
+        border-radius: 10px;
+    }
+
+    figcaption{
+        position: absolute;
+        top: 77%;
+        left: 4%;
+        z-index: 1;
+        margin-top: 0;
+        margin-bottom: 0;
+        overflow: hidden;
+        color: $title-color-img-about;
+        font-weight: 500;
+        font-family: 'Montserra', sans-serif;
+        font-size: 14px;
+        max-width: 170px;
+        width: calc(27.35vw/2)
+    }
+}
+
+

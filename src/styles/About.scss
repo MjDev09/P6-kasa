@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import 'colors';
+
+
+.valeurs {
+    max-width: 1023px;
+    min-height: 298px;
+    margin: auto;
+    border: red 1px solid;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    &__box {
+        width: 100%;
+        margin-bottom: 15px;
+        position: relative;
+    }
+    
+}
+
+.boxValor {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $text-color-primary;
+    color: $title-color-img-about;
+    border-radius: 5px;
+    box-sizing: border-box;
+    z-index: 1;
+
+    &__title {
+        width: 80%;
+        margin: 0;
+        height: 52px;
+        line-height: 52px;
+        font-weight: 500;
+        font-family: 'Montserra', sans-serif;
+        font-size: 24px;
+        padding-left: 15px;
+        box-sizing: border-box;
+        z-index: 2;
+    }
+    
+    &__icone-arrow {
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        margin-right: 13px;
+        box-sizing: border-box;
+        background-color: $text-color-primary;
+        border: none;
+        background-image: url('../assets/arrow_back.png') ;
+    
+        &:hover {
+            animation: arrowRotate 300ms both;
+        }
+    }
+
+}
+
+.textVisible {
+    width: 100%;
+    border-radius: 0px 0px 5px 5px;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    z-index: -1;
+    color:$text-color-primary;
+    background-color: $background-gallery-desktop;
+    font-size: 18px;
+    line-height: 25.67px;
+    font-weight: 400;
+    margin: 0;
+    font-family: 'Montserra', sans-serif;
+    animation: textAppearance 2000ms both;
+}
+
+.textHidden {
+    width: 100%;
+    position: absolute;
+    transform: translateY(-71.92px);
+    z-index: -1;
+}
+
+.boxText {
+    width: 100%;
+    height: 52px;
+    overflow: hidden;
+}
+
+textAnimationOn {
+
+}
+
+textAnimationOff {
+
+}
+
+@keyframes arrowRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-180deg)
+    }
+}
+
+@keyframes arrowRotate-reverse {
+    from {
+        transform: rotate(-180deg)
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes textAppearance {
+    from {
+        transform: translateY(-100%);
+        transform-origin: bottom;     
+    }
+    to {
+        transform:translateY(0);
+        
+    }
+}
+
+@keyframes boxExtension {
+    from {
+        height: 2px;
+        transform-origin: bottom;
+    }
+    to {
+        height: auto;
+        box-sizing: border-box;
+    }
+}
+

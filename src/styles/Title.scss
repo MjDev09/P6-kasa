@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import 'colors';
+
+$image: '../assets/background-title.png';
+.boxTitle {
+    max-width: 1240px;
+    height: 223px;
+    margin: auto;
+    position: relative;
+
+    &__image {
+        width: 100%;
+        height: 223px;
+        object-fit: cover;
+        border-radius: 25px;
+        filter: brightness(0.7)
+    }
+
+    &__title {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+
+        margin-top: 0;
+        margin-bottom: 0; 
+        color: $text-color-title-footer;
+        font-family: 'Montserra', sans-serif;
+        text-align: center;
+        font-weight: 500;
+        font-size: 48px;
+        
+    }
+
+}
