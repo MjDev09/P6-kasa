@@ -5,9 +5,32 @@ import '../styles/Slideshow.scss'
 function Slideshow (){
     const { dataLogement, changeDataLogement } = useContext(LogementContext) 
 
-
-    const [cart, updateCart] = useState(3)
+    const pictures2 = dataLogement.pictures
+    console.log(pictures2)
     
+
+    const totalPictures = pictures2.length
+    console.log(totalPictures)
+    
+    const [currentPicture, setCurrentPicture] = useState(0)
+    const changePictureMore = () => {
+        if (currentPicture < totalPictures - 1){
+            setCurrentPicture(currentPicture +1)
+        }
+        else {
+            setCurrentPicture(0)
+        }
+    }
+
+    const changePictureLess = () => {
+        if (currentPicture > 0){
+            setCurrentPicture(currentPicture -1)
+        }
+        else {
+            setCurrentPicture(totalPictures - 1)
+        }
+    }
+    console.log(pictures2[currentPicture])
     {/*const [savedData, setSavedData] = useState(null);
 
     useEffect(() => {
@@ -31,11 +54,12 @@ function Slideshow (){
     
     return(
         <div>
-            {console.log(cart)}
+            
            <div className='boxSlide'>
-            <img key={`${dataLogement.id}-image`} src={dataLogement.cover} alt={dataLogement.title} className='boxSlide__picture'/>
-            <button className='boxSlide__btn boxSlide__btn-left'></button>
-            <button className='boxSlide__btn boxSlide__btn-right'></button>
+            <img key={`${dataLogement.id}-image`} src={dataLogement.pictures[currentPicture]} alt={dataLogement.title} className='boxSlide__picture'/>
+            <button className='boxSlide__btn boxSlide__btn-left' onClick={() => changePictureLess()}>
+            </button>
+            <button className='boxSlide__btn boxSlide__btn-right' onClick={() => changePictureMore()}></button>
             <p className='boxSlide__numberPicture'></p>
             </div>
     
