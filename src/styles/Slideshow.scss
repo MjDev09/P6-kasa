@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import 'colors';
+
+$image_btn-left : '../assets/btn-left.png';
+$image_btn-right : '../assets/btn-right.png';
+
+.boxSlide {
+    max-width: 1240px;
+    height: 415px;
+    margin: auto;
+    position: relative;
+
+    &__picture {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+
+    &__btn {
+        width: 96px;
+        height: 119.64px;
+        z-index: 1;
+    }
+
+    &__btn-left {
+        background-image: url($image_btn-left);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+    }
+
+    &__btn-right {
+        background-image: url($image_btn-right);
+        background-repeat: no-repeat;
+    }
+
+    &__numberPicture {
+        color: $title-color-img-about;
+        font-family: 'Montserra', sans-serif;
+        line-height: 25.67px;
+        font-weight: 500;
+        font-size: 18px;
+
+    }
+
+}

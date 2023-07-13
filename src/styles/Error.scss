@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import 'colors';
+
+.mainError {
+    max-width: 1240px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 0;
+
+    &__title {
+        font-family: 'Montserra', sans-serif;
+        margin: 0;
+        font-size: 288px;
+        font-weight: 700;
+        
+        color: $text-color-primary;
+    }
+
+    &__subTitle {
+        
+        font-family: 'Montserra', sans-serif;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        font-size: 36px;
+        line-height: 51.34px;
+        font-weight: 500;
+        color: $text-color-primary;
+    }
+
+    &__linkError {
+        margin-bottom: 100px;
+        font-family: 'Montserra', sans-serif;
+        font-size: 18px;
+        line-height: 25.67px;
+        font-weight: 500;
+        color: $text-color-primary;
+        
+    }
+}

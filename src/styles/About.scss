@@ -64,11 +64,12 @@
     animation: arrowRotate-reverse 300ms both;
 }
 
-.hidden {
+.hiddenText {
     width: 100%;
     border-radius: 0px 0px 5px 5px;
-    padding: 20px 15px;
+    padding: 15px 10px;
     box-sizing: border-box;
+    margin: 0;
     z-index: -1;
     color:$text-color-primary;
     background-color: $background-gallery-desktop;
@@ -78,22 +79,29 @@
     margin: 0;
     font-family: 'Montserra', sans-serif;
     position: absolute;
-    transform: translateY(-71.92px);
-}
+    transform: translateY(-100%);
 
-.textVisible {
-   
-    animation: textAppearance 2000ms both;
-}
-
-.textHidden {
-    animation: textAppearance-reverse 2000ms both;
+    &-visible {
+        animation: textAppearance 2000ms both;
+    }
+    &-noVisible {
+        animation: textAppearance-reverse 2000ms both;
+    }
 }
 
 .boxText {
     width: 100%;
     height: 2px;
     overflow: hidden;
+    position: relative;
+    padding: 0;
+    margin-bottom: 20px;
+    &-extension{
+        animation: boxExtension 2000ms both
+    }
+    &-shrinking{
+        animation: boxShrinking 2000ms both;
+    }
 }
 
 
@@ -102,13 +110,14 @@
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(-180deg)
+        transform: rotate(-180deg);
+        
     }
 }
 
 @keyframes arrowRotate-reverse {
     from {
-        transform: rotate(-180deg)
+        transform: rotate(-180deg);
     }
     to {
         transform: rotate(0deg);
@@ -143,8 +152,18 @@
         transform-origin: bottom;
     }
     to {
-        height: auto;
-        box-sizing: border-box;
+        height: 81.3px;
+
     }
 }
 
+@keyframes boxShrinking {
+    from {
+        height: 81.3px;
+        transform-origin: top;
+    }
+    to {
+        height: 2px;
+        box-sizing: border-box;
+    }
+}

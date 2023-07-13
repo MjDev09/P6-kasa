@@ -1,27 +1,9 @@
 import '../styles/Title.scss'
 import '../styles/About.scss'
 import img_title from '../assets/background-about.png'
-import { useContext, useEffect } from 'react'
-import { ValorContext } from '../utils/ContextProvider'
-import { AnimationContext } from '../utils/ContextProvider'
+import ToggleSlide from '../components/Animation'
 
 function About() {
-    const { openOnglet, valeurs } = useContext(ValorContext)
-    
-
-    const { animationFunction, animationOn } = useContext(AnimationContext)
-    
-
-    const animationFiabiliteClick = () => {
-        openOnglet('onglet_fiabilite')
-        animationFunction('animation_fiabilite')
-    }
-
-    const AnimationFiabiliteEnd = () => {
-        openOnglet('onglet_fiabilite');
-      };
-
-
     return (
         <div>
             <div className='boxTitle'>
@@ -29,38 +11,21 @@ function About() {
             </div>
             
             <div className='valeurs'>
-                <div className='valeurs__box'>
-                    <div className='boxValor'>
-                        <h2 className='boxValor__title'>Fiabilité</h2>
-                        <button onClick={animationFiabiliteClick}  className={`boxValor__icone-arrow ${animationOn ? (valeurs ? 'btn-anim' : 'btn-anim-reverse') : ''}`}
-        onAnimationEnd={AnimationFiabiliteEnd}></button>
-                    </div>{console.log(valeurs)}{console.log(animationOn)} 
-                    <div className='boxText'>
-                        <p className={`hidden ${animationOn ? (valeurs ? 'textVisible' : 'textHidden') : ''}`}
-        >Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.</p>
-                    </div>
-                </div>
+                <ToggleSlide titleDropdawn="Fiabilité">Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.</ToggleSlide>
 
-                <div className='valeurs__box'>
-                    <h2 className='valeurs__box__title'>Respect</h2>
-                    {/*<img src={icone_arrow} alt='icone arrow_back'/>*/}
-                    <span></span>
-                </div>
+                <ToggleSlide titleDropdawn="Respect">La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.
+                </ToggleSlide>
 
-                <div className='valeurs__box'>
-                    <h2 className='valeurs__box__title'>Service</h2>
-                    
-                    <span></span>
-                </div>
-                
-                <div className='valeurs__box'>
-                    <h2 className='valeurs__box__title'>Sécurité</h2>
-                    
-                    <span></span>
-                </div>
+                <ToggleSlide titleDropdawn="Service">
+                La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.    
+                </ToggleSlide>
+
+                <ToggleSlide titleDropdawn="Sécurité">
+                La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.    
+                </ToggleSlide>
             </div>
         </div>
-    )
-}
-
-export default About
+        )
+    }
+    
+    export default About
