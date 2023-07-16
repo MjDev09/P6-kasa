@@ -6,8 +6,8 @@ import ToggleSlide from '../components/Animation'
 function About() {
     return (
         <div>
-            <div className='boxTitle'>
-                <img src={img_title} alt='Grandes roches au bord de mer' className='boxTitle__image'/>
+            <div className='boxTitle boxTitleAbout'>
+                <img src={img_title} alt='Grandes roches au bord de mer' className='boxTitle__image boxTitleAbout__image'/>
             </div>
             
             <div className='valeurs'>

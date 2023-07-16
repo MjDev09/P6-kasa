@@ -7,13 +7,22 @@ $image: '../assets/background-title.png';
     height: 223px;
     margin: auto;
     position: relative;
+    
+    @media (max-width: 500px) {
+        max-width: 335px;
+        height: 111px;
+    }
 
     &__image {
         width: 100%;
         height: 223px;
         object-fit: cover;
         border-radius: 25px;
-        filter: brightness(0.7)
+        filter: brightness(0.7);
+
+        @media (max-width: 500px) {
+            height: 111px;
+        }
     }
 
     &__title {
@@ -30,8 +39,21 @@ $image: '../assets/background-title.png';
         font-family: 'Montserra', sans-serif;
         text-align: center;
         font-weight: 500;
-        font-size: 48px;
+        font-size: 3rem;
         
+        @media (max-width: 960px) {
+            font-size: 2.5rem;
+        }
+        
+        @media (max-width: 500px) {
+            max-width: 217px;
+            text-align: start;
+            font-size: 1.5rem;
+            line-height: 24px;
+            left: 7%;
+            transform: translate(-7%, -50% );
+        }
     }
 
 }
+

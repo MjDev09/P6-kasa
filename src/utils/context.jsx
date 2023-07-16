@@ -7,6 +7,13 @@ export const LogementContextProvider = ({ children }) => {
     const changeDataLogement = (data) => {
         setDataLogement(data)
     }
+    if (dataLogement && dataLogement.length === 0) {
+        const data = localStorage.getItem('logementSelected')
+        if (data) {
+        changeDataLogement(JSON.parse(data))
+        console.log(JSON.parse(data))
+        }
+    } 
 
     return (
         <LogementContext.Provider value={{ dataLogement, changeDataLogement}}>

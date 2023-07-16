@@ -1,6 +1,7 @@
 import logo from '../assets/logo.png'
+import logoSmall from '../assets/logoSmall.png'
 import '../styles/Header.scss'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function Header(){
     return (
@@ -8,8 +9,10 @@ function Header(){
             <img src={logo} alt='Logo Kasa' className='banner__logo' />
             
             <nav className='banner__nav'>
-                <Link to="/" className='nav__btn nav__btn-accueil'>Accueil</Link>
-                <Link to="/About" className='nav__btn nav__btn-apropos'>A Propos</Link>
+                <NavLink to="/" className={({ isActive }) => 
+                      (isActive ? "nav__btn nav__btn-accueil active-link" : "nav__btn nav__btn-accueil inactive-link")} >Accueil</NavLink>
+                <NavLink to="/About" className={({ isActive }) => 
+                      (isActive ? "nav__btn nav__btn-accueil active-link" : "nav__btn nav__btn-accueil inactive-link")}>À Propos</NavLink>
             </nav>
         </header>
     )

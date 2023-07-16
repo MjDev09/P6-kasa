@@ -3,20 +3,32 @@
 
 .mainError {
     max-width: 1240px;
-    height: 700px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto 0;
 
+    @media (max-width: 500px) {
+        max-width: 335px;
+    }
+
     &__title {
         font-family: 'Montserra', sans-serif;
         margin: 0;
-        font-size: 288px;
+        font-size: 18rem;
         font-weight: 700;
-        
         color: $text-color-primary;
+        
+
+        @media (max-width: 500px) {
+            height: 99px;
+            font-size: 6rem;
+            line-height: 136.9px;
+            max-width: 198px;
+            margin-top: 80px;
+        }
     }
 
     &__subTitle {
@@ -24,19 +36,35 @@
         font-family: 'Montserra', sans-serif;
         margin-top: 50px;
         margin-bottom: 100px;
-        font-size: 36px;
+        font-size: 2.25rem;
         line-height: 51.34px;
         font-weight: 500;
         color: $text-color-primary;
+        text-align: center;
+
+        @media (max-width: 500px) {
+            max-width: 260px;
+            font-size: 1.1rem;
+            line-height: 25.67px;
+            margin-top: 80px;
+            height: 52px;
+        }
+
     }
 
     &__linkError {
         margin-bottom: 100px;
         font-family: 'Montserra', sans-serif;
-        font-size: 18px;
+        font-size: 1.1rem;
         line-height: 25.67px;
         font-weight: 500;
         color: $text-color-primary;
         
+        @media (max-width: 500px) {
+            max-width: 221px;
+            font-size: 0.9rem;
+            line-height: 19.96px;
+        }
+
     }
 }

@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import 'colors';
+
+$starActive : '../assets/starRate.png';
+$starInactive : '../assets/starInactive.png';
+$starActiveLitle : '../assets/starActiveLitle.png';
+$starInactiveLitle : '../assets/starInactiveLitle.png';
+
+.boxLogementTitleTags {
+    max-width: 1240px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 500px) {
+        max-width: 335px;
+        flex-direction: column;
+
+    }
+}
+
+
+.boxDetail {
+    max-width: 635px;
+    margin: 0;
+    font-family: 'Montserra', sans-serif;
+    font-weight: 500;
+    color: $text-color-primary;
+
+    @media (max-width: 500px) {
+        max-width: 335px;
+    }
+
+    &__title {
+        font-size: 2rem;
+        
+        margin: 0;
+        margin-top: 40px;
+
+        @media (min-width:501px) and (max-width: 770px) {
+            font-size: 1.5rem;
+            line-height: 36.36px;
+        }
+
+        
+
+        @media (max-width: 500px) {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            line-height: 25px;
+        }
+    }
+    
+
+    &__location {
+        height: 26px;
+        font-size: 1.1rem;
+        line-height: 25.67px;
+        margin: 5px 0 10px;
+
+        @media (max-width: 500px) {
+            font-size: 0.9rem;
+            line-height: 19.96px;
+            margin: 0;
+            margin-top: 10px;
+        }
+        
+    }
+
+    &__list {
+        width: 100%;
+        display: flex;
+        list-style-type: none;
+        font-family: 'Montserra', sans-serif;
+        font-weight: 500;
+        font-size: 0.9rem;
+        line-height: 25px;
+        text-align: center;
+        color: $title-color-img-about;
+        padding: 0;
+
+        @media (max-width: 500px) {
+            margin: 0;
+            justify-content: flex-start;
+        }
+    }
+
+    &__puceList {
+        min-width: 115px;
+        height: 25px;
+        background-color: $text-color-primary;
+        border-radius: 10px;
+        margin-right: 20px;
+
+        @media (max-width: 600px) {
+            min-width: 95px;
+            margin-right: 15px;
+        }
+        
+        @media (max-width: 500px) {
+            min-width: 70px;
+            font-size: 0.7rem;
+            margin-right: 10px;
+        }
+
+    }
+}
+
+.boxHostRate {
+    max-width: 196px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    @media (max-width: 500px) {
+        max-width: 335px;
+        height: 33px;
+        margin-top: 10px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    &__figureHost {
+        max-width: 167px;
+        height: 64px;
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0;
+        margin-top: 40px;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 500px) {
+            max-width: 135px;
+            height: 33px;
+            margin-top: 0px;
+            justify-content: end;
+        }
+
+        &__picture {
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0;
+
+            @media (max-width: 500px) {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    
+        &__name {
+            max-width: 93px;
+            max-height: 52px;
+            font-family: 'Montserra', sans-serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            line-height: 25.6px;
+            text-align: end;
+            color: $text-color-primary;
+            padding: 0;
+            margin: 0;
+
+            @media (max-width: 500px) {
+                max-height: 33px;
+                font-size: 0.8rem;
+                line-height: 16.11px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+   
+
+    &__rate {
+        max-width: 196px;
+        height: 36px;
+        text-align: end;
+        margin-top: 15px;
+    
+        @media (max-width: 500px) {
+            width: 98px;
+            height: 18px;
+            margin-top: 0px;
+        }
+    }
+
+}
+
+.boxTabInfoLogement{
+    max-width: 1240px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7%;
+    
+    @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+        gap: 0%;
+    }
+
+    &__box {
+        flex-grow: 1;
+    }
+
+    @media (max-width: 500px) {
+        max-width: 335px;
+    }
+
+}
+
+.puceListEquipment {
+    list-style-type: none;
+}
+
+.box_star {
+    display: flex;
+    justify-content: end;
+    text-align: center;
+    background-position: center;
+
+    @media (max-width: 500px) {
+        justify-content: flex-start; 
+        background-position: center;  
+    }
+}
+
+
+.star {
+    width: 24.75px;
+    height: 24px;
+    margin-left: 5px;
+    background-repeat: no-repeat;
+
+    @media (max-width: 500px) {
+        width: 14px;
+        max-height: 14px;
+        margin-left: 0;
+        margin-right: 5px;
+        margin-top: 0px;
+        
+    }
+}
+
+
+
+.starActive {
+    
+    background-image: url($starActive);
+
+    @media (max-width: 500px) {   
+        background-image: url($starActiveLitle);
+    }
+
+    
+}
+
+.starInactive{
+    background-image: url($starInactive);
+
+    @media (max-width: 500px) {
+        background-image: url($starInactiveLitle);
+    }
+}

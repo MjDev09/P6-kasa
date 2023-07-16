@@ -11,23 +11,47 @@
     background-color: $background-gallery-desktop ;
     box-sizing: border-box;
     border-radius: 25px;
+
+    @media (max-width: 960px) {
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    @media (max-width: 500px) {
+    max-width: 335px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    grid-template-columns: 1fr;
+    padding: 0;
+    gap: 10px;
+    }
+
 }
 
-figure{
+.figureGallery{
     max-width: 340px;
     max-height: 340px;
     margin: auto;
     position: relative;
+    
+    @media (max-width: 500px) {
+        max-width: 335px;
+        height: 255px;
+    }
 
-    img{
+    &__image{
         object-fit: cover;
         width: 100%;
         max-height: 340px;
         height: 27.35vw;
         border-radius: 10px;
+        
+        @media (max-width: 500px) {
+        height: 255px;
+        }
     }
 
-    figcaption{
+    &__titre{
         position: absolute;
         top: 77%;
         left: 4%;
@@ -38,9 +62,24 @@ figure{
         color: $title-color-img-about;
         font-weight: 500;
         font-family: 'Montserra', sans-serif;
-        font-size: 14px;
+        font-size: 1.1rem;
         max-width: 170px;
-        width: calc(27.35vw/2)
+        width: calc(27.35vw/2);
+
+        @media (max-width: 960px) {
+            max-width: 300px;
+            width: auto;
+            top: 65%;
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 500px) {
+            max-width: 290px;
+            height: 52px;
+            font-size: 1.1rem;
+            top: 77%;
+            width: auto;
+        }
     }
 }
 

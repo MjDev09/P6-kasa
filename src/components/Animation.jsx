@@ -26,9 +26,9 @@ function ToggleSlide({titleDropdawn, children}){
                 </div>
 
                 <div className={`boxText ${isLoadAnimation ? (isAnimated ? 'boxText-extension' : 'boxText-shrinking') : ''}`}>
-                    <p className={`hiddenText ${isLoadAnimation ? (isAnimated ? 'hiddenText-visible' : 'hiddenText-noVisible') : ''}`}>
+                    <div className={`hiddenText ${isLoadAnimation ? (isAnimated ? 'hiddenText-visible' : 'hiddenText-noVisible') : ''}`}>
                         {children}
-                    </p>
+                    </div>
                 </div>
 
             </div>
