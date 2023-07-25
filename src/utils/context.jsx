@@ -11,7 +11,7 @@ export const LogementContextProvider = ({ children }) => {
         const data = localStorage.getItem('logementSelected')
         if (data) {
         changeDataLogement(JSON.parse(data))
-        console.log(JSON.parse(data))
+        
         }
     } 
 

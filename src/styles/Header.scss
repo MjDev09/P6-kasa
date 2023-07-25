@@ -9,11 +9,23 @@ $height-banner: 68px;
     align-items: center;
     justify-content: space-between;
     margin: 2em auto 3em;
+    @media (max-width: 1260px) {
+        margin-right: 8px;
+        margin-left: 8px;
+        box-sizing: border-box;
+    }
 
     @media (max-width: 500px) {
         max-width: 335px;
         margin: 0 auto 0;
     }
+
+    @media (max-width: 345px) {
+        margin-right: 4px;
+        margin-left: 4px;
+        box-sizing: border-box;
+    }
+    
     &__logo {
         max-width: 210px; 
         height: $height-banner;  
@@ -46,6 +58,7 @@ $height-banner: 68px;
         @media (max-width: 500px) {
             max-width: 190px;
             height: 47px;
+            gap: 15px;
         }
 
     }

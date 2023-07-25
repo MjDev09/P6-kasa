@@ -12,10 +12,24 @@ $starInactiveLitle : '../assets/starInactiveLitle.png';
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 1260px) {
+        margin-right: 8px;
+        margin-left: 8px;
+        box-sizing: border-box;
+    }
+
     @media (max-width: 500px) {
         max-width: 335px;
+        margin-right: auto;
+        margin-left: auto;
         flex-direction: column;
 
+    }
+    
+    @media (max-width: 345px) {
+        margin-right: 4px;
+        margin-left: 4px;
+        box-sizing: border-box;
     }
 }
 
@@ -164,6 +178,7 @@ $starInactiveLitle : '../assets/starInactiveLitle.png';
             color: $text-color-primary;
             padding: 0;
             margin: 0;
+            padding-right: 10px;
 
             @media (max-width: 500px) {
                 max-height: 33px;
@@ -198,9 +213,23 @@ $starInactiveLitle : '../assets/starInactiveLitle.png';
     grid-template-columns: 1fr 1fr;
     gap: 7%;
     
+    @media (max-width: 1260px) {
+        margin-right: 8px;
+        margin-left: 8px;
+        box-sizing: border-box;
+    }
+
     @media (max-width: 500px) {
         grid-template-columns: 1fr;
         gap: 0%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media (max-width: 345px) {
+        margin-right: 4px;
+        margin-left: 4px;
+        box-sizing: border-box;
     }
 
     &__box {

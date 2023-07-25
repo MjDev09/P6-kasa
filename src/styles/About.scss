@@ -90,11 +90,11 @@
 }
 
 .btn-anim {
-    animation: arrowRotate 300ms both;
+    animation: arrowRotate 200ms both;
 }
 
 .btn-anim-reverse {
-    animation: arrowRotate-reverse 300ms both;
+    animation: arrowRotate-reverse 200ms both;
 }
 
 .hiddenText {
@@ -119,10 +119,10 @@
     }
 
     &-visible {
-        animation: textAppearance 2000ms both;
+        animation: textAppearance 1000ms both;
     }
     &-noVisible {
-        animation: textAppearance-reverse 2000ms both;
+        animation: textAppearance-reverse 1000ms both;
     }
 }
 
@@ -134,10 +134,10 @@
     padding: 0;
     margin-bottom: 20px;
     &-extension{
-        animation: boxExtension 3000ms both
+        animation: boxExtension 700ms both
     }
     &-shrinking{
-        animation: boxShrinking 1000ms both;
+        animation: boxShrinking 700ms both;
     }
 }
 
