@@ -11,7 +11,7 @@ function FicheLogement () {
     
     const isIdPresent = logements.some(logement => logement.id === logementId)
     if (!isIdPresent) {
-        console.log('est bien false');
+        
         return <Error/>;
 
     }

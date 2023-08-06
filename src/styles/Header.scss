@@ -16,6 +16,14 @@ $height-banner: 68px;
     }
 
     @media (max-width: 500px) {
+        max-width: 446.5px;
+        padding-left: 4px;
+        padding-right: 4px;
+        box-sizing: border-box;
+        margin: 0 auto 0;
+    }
+
+    @media (max-width: 400px) {
         max-width: 335px;
         margin: 0 auto 0;
     }
@@ -51,8 +59,8 @@ $height-banner: 68px;
         }
 
         @media (min-width: 961px) {
-            width: 309px;
-            max-width: none;
+            max-width: 309px;
+            gap: 60px;
         }
 
         @media (max-width: 500px) {

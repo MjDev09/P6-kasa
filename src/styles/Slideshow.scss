@@ -21,10 +21,17 @@ $image_btn-right-litle : '../assets/btn-right-litle.png';
     @media (max-width: 500px) {
         margin-right: auto;
         margin-left: auto;
-        max-width: 335px;
+        max-width: 446.5px;
         height: 255px;
+        padding-left: 4px;
+        padding-right: 4px;
+        box-sizing: border-box;
     }
     
+    @media (max-width: 400px) {
+        max-width: 335px;
+    }
+
     @media (max-width: 345px) {
         margin-right: 4px;
         margin-left: 4px;

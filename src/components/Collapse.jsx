@@ -4,17 +4,14 @@ import React, { useState, } from 'react'
 
 
 
-function ToggleSlide({titleDropdawn, children}){
+function Collapse({titleDropdawn, children}){
     
-    const [isTextVisible, setIsTextVisible] = useState(false)
+    const [isAnimated, setIsAnimated] = useState(false) //état qui permet de savoir si l'onglet est ouvert ou fermé//
 
-    const [isAnimated, setIsAnimated] = useState(false)
-
-    const [isLoadAnimation, setIsLoadAnimation] =useState(false)
+    const [isLoadAnimation, setIsLoadAnimation] =useState(false)  //état qui est à faux au départ pour éviter l'animation au chargement de page//
     
     const handleClick = () => {
         setIsAnimated(!isAnimated)
-        setIsTextVisible(!isTextVisible)
         setIsLoadAnimation(true)
     }
         return (
@@ -35,4 +32,4 @@ function ToggleSlide({titleDropdawn, children}){
     )
 }
 
-export default ToggleSlide
+export default Collapse;

@@ -8,34 +8,20 @@ import housing from '../data/housing.json';
 function Slideshow (){
     let { logementId } = useParams();
     
-    console.log(logementId);
     const logements = housing;
-    const isIdPresent = logements.some(logement => logement.id === logementId)
-    console.log(isIdPresent)
-    
-    
       
-    
-   
-    
-    
-   
+       
     const [currentPicture, setCurrentPicture] = useState(0);
     const [currentLogement, setCurrentLogement] = useState(logements.find((element) => element.id === logementId));
-    console.log(currentLogement)
-  
-    const tableID = logements.map((house) => house.id);
-    console.log(tableID)
-
     
-
     let pictures2 = [] 
     if (currentLogement && currentLogement.pictures) {
         pictures2 = currentLogement.pictures
     } 
     const totalPictures = pictures2.length
                     
-    const changePictureMore = () => {
+    //fonction pour gérer les photos suivantes//
+    const changePictureMore = () => {                 
         if (currentPicture < totalPictures - 1){
             setCurrentPicture(currentPicture +1)
         }
@@ -44,7 +30,8 @@ function Slideshow (){
         }
         }
 
-        const changePictureLess = () => {
+    //fonction pour gérer les photos précédentes//
+    const changePictureLess = () => {
             if (currentPicture > 0){
                 setCurrentPicture(currentPicture -1)
             }

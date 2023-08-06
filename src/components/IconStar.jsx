@@ -1,7 +1,7 @@
 
 import '../styles/LogementTitleTags.scss'
 
-
+//permet d'afficher le nombre d'image active et le nombre image inactive sachant que le total des 2 types d'images est égales à 5//
 function IconStar({ rating })  {
     const starRating = []
     const starInactive= []

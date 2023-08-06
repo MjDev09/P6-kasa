@@ -2,18 +2,18 @@ import { useState } from 'react';
 import { LogementContext } from '../utils/context';
 import '../styles/LogementTitleTags.scss'
 import IconStar from './IconStar';
-import ToggleSlide from './Animation';
+import Collapse from './Collapse';
 import housing from '../data/housing.json';
 import { useParams } from 'react-router-dom';
 
 function LogementTitleTags () {
     
     let { logementId } = useParams();
-    console.log(logementId);
+    
     const logements = housing;
-    console.log(logements)
+    
     const [currentLogement, setCurrentLogement] = useState(logements.find((element) => element.id === logementId));
-    console.log(currentLogement)
+   
     const tableTags = currentLogement.tags 
     const rating= currentLogement.rating
     const tableEquipments = currentLogement.equipments
@@ -47,12 +47,12 @@ function LogementTitleTags () {
             </div> 
             <div className='boxTabInfoLogement'>
                 <div className='boxTabInfoLogement__box'>
-                    <ToggleSlide titleDropdawn='Description'>{currentLogement.description}
-                    </ToggleSlide>
+                    <Collapse titleDropdawn='Description'>{currentLogement.description}
+                    </Collapse>
                 </div>
 
                 <div className='boxTabInfoLogement__box'>
-                    <ToggleSlide titleDropdawn='Équipements'>
+                    <Collapse titleDropdawn='Équipements'>
                         <ul>
                             {tableEquipments.map((equipment,index) => (
                             <li className='puceListEquipment' key={`${index}-${equipment}`}>{equipment}</li>
@@ -60,7 +60,7 @@ function LogementTitleTags () {
                             ))}
                         </ul>
                         
-                    </ToggleSlide>
+                    </Collapse>
                 </div>
             </div>
         </div>       
